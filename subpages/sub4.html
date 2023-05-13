@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!-- creates HTML5 file; called "DOCTYPE declaration" -->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <!-- ^^defines width of website for different devices" -->
+    <title>Intimate exchange</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+  </head>
+
+  <body>
+    <h1>Intimate exchange over time for boy and girls</h1>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <p>
+      Intimate exchange is the action of sharing information that is private,
+      secret, or emotional with a friend. Adolescents in intimate friendships
+      tend to show higher social competency and emotional well-being. Girls are
+      more likely to self-disclose emotions and seek emotional support than
+      boys, which translates into higher levels of intimate exchange in
+      friendships. One study has also found that late adolescent boys are likely
+      to lose the intimate friendships they built in early and mid-adolescence,
+      perhaps due to their increasing awareness and adherence to the
+      stereotypical standards of male friendships that regard intimacy as
+      feminine.
+    </p>
+    <br />
+    <br />
+    <div class="row">
+      <div class="column">
+        <div class="container">
+          <div class="container">
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            <div class="mySlides">
+              <div class="numbertext">
+                <em> 1 / 3</em>
+                <br />
+                &#40;Click arrow for the next graph&#41;
+              </div>
+              <br />
+              <br />
+              <img src="../images/fqi1_fig.png" style="width: 60%" />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">
+                <em>2 / 3</em>
+                <br />
+                &#40;Click arrow for the next graph&#41;
+              </div>
+              <br />
+              <br />
+              <img src="../images/fqi2_fig.png" style="width: 60%" />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">
+                <em>3 / 3</em>
+                <br />
+                &#40;Click arrow for the next graph&#41;
+              </div>
+              <br />
+              <br />
+              <img src="../images/fqi3_fig.png" style="width: 60%" />
+            </div>
+
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <p>
+          Similar to what past research has found, girls tended to report more
+          frequent intimate exchange with close friends than boys. Most girls
+          reported medium-high to high levels of intimate exchange. For boys, it
+          seems that levels of intimate exchange varied widely between
+          individuals at T1 from as low as scores of 3 to 5 (17%) to higher
+          scores of 12 and 13 (21%). This pattern persisted at T2, although now
+          boys most commonly reported scores between 8-12 (around 40%). At T3,
+          the distribution seems slightly bimodal, with a cluster of boys
+          reporting scores of 7 and 8 (around 23%) and another cluster reporting
+          scores of 11 and 12 (around 29%). These interesting changes in the
+          distribution of boys’ friendship intimacy call for more detailed
+          examination in research.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+      }
+    </script>
+
+    <p style="bottom: 2px">
+      View pages about other friendship subdomains:
+      <a href="../subpages/sub3.html">validation</a>,
+      <a href="../subpages/sub5.html"> companionship</a>,
+      <a href="../subpages/sub6.html"> help</a>,
+      <a href="../subpages/sub7.html"> conflict resolution</a>
+      <br />
+      <br />
+      <a href="../index.html">Back to home page </a>
+    </p>
+  </body>
+</html>
